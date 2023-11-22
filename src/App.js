@@ -7,7 +7,7 @@ import { Routes, Route } from 'react-router-dom';
 import SearchView from './components/SearchView';
 import { useState, useEffect } from 'react';
 import MovieView from './components/MovieView';
-import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap.css';  
 
 
 
