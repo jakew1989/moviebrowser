@@ -19,19 +19,7 @@ function App() {
   const [isClicked, setIsClicked] = useState(false)
   const [genre, setGenre] = useState("")
   const [genreClicked, setGenreClicked] = useState(false)
-  const genreIndexList = [
-  {"genre": "Action", "index": 28} ,
-  {"genre": "Adventure", "index": 12},
-  {"genre": "Animation", "index": 16},
-  {"genre": "Comedy", "index": 35},
-  {"genre": "Crime", "index": 80}, {"genre": "Documentary", "index": 99},
-  {"genre": "Drama", "index": 18}, {"genre" : "Family", "index": 10751}, 
-  {"genre": "Fantasy", "index": 14},
-  {"genre": "History", "index": 36}, {"genre": "Horror", "index": 27}, 
-  {"genre": "Music", "index": 10402}, {"genre": "Mystery", "index": 9648}, 
-  {"genre": "Romance", "index":10749}, {"genre": "Science Fiction", "index": 878},
-  {"genre": "Thriller", "index": 53}, {"genre": "TV Movie", "index": 10770}, {"genre": "War", "index": 10752},
-  {"genre": "Western", "index": 37}]
+  
   
   useEffect(() => {
     if (searchText) {
@@ -47,6 +35,19 @@ function App() {
     }, [searchText])
 
   useEffect(() => {
+    const genreIndexList = [
+      {"genre": "Action", "index": 28} ,
+      {"genre": "Adventure", "index": 12},
+      {"genre": "Animation", "index": 16},
+      {"genre": "Comedy", "index": 35},
+      {"genre": "Crime", "index": 80}, {"genre": "Documentary", "index": 99},
+      {"genre": "Drama", "index": 18}, {"genre" : "Family", "index": 10751}, 
+      {"genre": "Fantasy", "index": 14},
+      {"genre": "History", "index": 36}, {"genre": "Horror", "index": 27}, 
+      {"genre": "Music", "index": 10402}, {"genre": "Mystery", "index": 9648}, 
+      {"genre": "Romance", "index":10749}, {"genre": "Science Fiction", "index": 878},
+      {"genre": "Thriller", "index": 53}, {"genre": "TV Movie", "index": 10770}, {"genre": "War", "index": 10752},
+      {"genre": "Western", "index": 37}]
     if (genre) {
       let genreIndex = genreIndexList.find((index) => index.genre === (genre));
       let genreIndexSearch = genreIndex.index
